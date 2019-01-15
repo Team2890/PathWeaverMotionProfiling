@@ -7,7 +7,10 @@
 
 package frc.robot;
 
+import java.nio.file.Path;
+
 import edu.wpi.first.wpilibj.RobotBase;
+import pathweaver.lib.CsvToTrajectories;
 
 /**
  * Do NOT add any static variables to this class, or any initialization at all.
@@ -23,7 +26,10 @@ public final class Main {
    *
    * <p>If you change your main robot class, change the parameter type.
    */
-  public static void main(String... args) {
-    RobotBase.startRobot(Robot::new);
+  public static void main(String... args) 
+  {
+
+    System.out.println(CsvToTrajectories.dirToTrajectories("src/main/java/pathweaver/output/"));
+    //RobotBase.startRobot(Robot::new);
   }
 }
